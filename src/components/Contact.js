@@ -18,7 +18,7 @@ class Contact extends Component {
       </aside>
 
 <aside className="foot">
-  &copy; 2018, All rights reserve
+<h5>  &copy; 2018, All rights reserve</h5>
 </aside>
             </div>
         );
