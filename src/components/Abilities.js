@@ -15,7 +15,7 @@ class Abilities extends Component {
       <aside className="right line">
         <br/>
         <h4>Web technologies:</h4>
-        <p>HTML5, CSS3, Bootstrap, jQuery, JavaScript, MVC5, React, Redux, JSON</p>
+        <p>HTML5, CSS3, Bootstrap, jQuery, JavaScript, MVC5, React, Vue, Vuetify, Redux, JSON</p>
       </aside>
 
       <aside className="left line">

@@ -9,17 +9,17 @@ class Home extends Component {
 
     this.state = {
       weather: {
-      },
+      }
     };
   }
 
   componentDidMount() {
     fetch(API)
     .then(response => response.json())
-    .then(data => this.setState({weather: data.main, sky: data.weather[0].description}));
+    .then(data => this.setState({weather: data.main, sky: data.weather[0].description, name: data.name}));
   }
     render() {
-      const { weather } = this.state;
+      const { weather, name, sky } = this.state;
         return (
             <div className="container">
                 <header className="App-header">
@@ -27,8 +27,8 @@ class Home extends Component {
                 </header>
                 <aside className="left weather">
                   <h3>Weather Information</h3>
-                  <p>Located in Stockholm</p>
-                  <p>The weather in Stockholm is {(weather.temp-273.15).toFixed(2)} degrees celsius at the moment & {this.state.sky}</p>
+                  <p>Located in <span style={styles.location}>{name}</span></p>
+                  <p>The present weather in {name} is <span style={styles.temp}>{(weather.temp-273.15).toFixed(2)} </span> degrees celsius at the moment & {sky}.</p>
                 </aside>
                 <article className="centered">
                   <h1>Masudul Hasan</h1>
@@ -43,3 +43,11 @@ class Home extends Component {
 }
 
 export default Home;
+let styles= {
+  temp:{
+    color: 'red'
+  },
+  location: {
+    color:'blue'
+  }
+}

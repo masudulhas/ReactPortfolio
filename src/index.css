@@ -28,8 +28,7 @@ ul li {
   padding: 20px;
 }
 
-ul li:hover,
-li.selected {
+ul li:hover {
   background-color: #e91e63;
 }
 
