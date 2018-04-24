@@ -5,7 +5,7 @@ class Experiences extends Component {
         return (
             <div className="container">
               <h2 className="tagline">Experiences</h2>
-      <p class="lead">&ldquo;Protons give an atom its identity, electrons its personality.&rdquo;<br />- Bill Bryson, A short history of nearly everything</p>
+      <p className="lead">&ldquo;Protons give an atom its identity, electrons its personality.&rdquo;<br />- Bill Bryson, A short history of nearly everything</p>
       <hr/>
       <aside className="left">
         <h3>Educations</h3>

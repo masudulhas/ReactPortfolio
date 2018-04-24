@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import image from '../assets/Selected.png'
 
 const API = 'https://api.openweathermap.org/data/2.5/weather?q=Stockholm,se&APPID=746790d46755caeb8e004dafd2305798';
-class Home extends Component {
 
+class Home extends Component {
   constructor(props) {
     super(props);
 

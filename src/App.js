@@ -1,15 +1,12 @@
 import React, { Component } from 'react';
 import Navbar from './components/Navbar';
-import Profile from './components/Profile';
-import image from './assets/m.png'
 
 class App extends Component {
-  render() {
+    render() {
     return (
       <div className="App">
 
         <Navbar />
-
 
       </div>
     );
@@ -17,3 +14,8 @@ class App extends Component {
 }
 
 export default App;
+
+let styles = {
+  backgroundColor: 'red'
+
+}

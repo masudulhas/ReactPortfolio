@@ -128,7 +128,7 @@ ol {
 ol li {
   list-style: none;
 }
-.formcontrol{
+.form-control{
 display: block;
     width: 100%;
     padding: .375rem .75rem;
@@ -140,6 +140,10 @@ display: block;
     border: 1px solid #ced4da;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out
+    }
+    button.btn{
+      background: cadetblue;
+      margin-left:12px;
     }
 @media screen and (max-width:767px) {
   .toggle {

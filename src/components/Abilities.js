@@ -29,7 +29,7 @@ class Abilities extends Component {
 
               <aside className="left line">
                 <h4>IDE(s):</h4>
-                <p> NetBeans, Eclipse, Visual Studio</p>
+                <p> Atom, Visual Studio Code, NetBeans,<br /> Eclipse, Visual Studio</p>
               </aside>
               <aside className="right line">
                 <h4>OS:</h4>
