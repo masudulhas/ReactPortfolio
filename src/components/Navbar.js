@@ -12,7 +12,18 @@ import Abilities from './Abilities';
 import Projects from './Projects';
 import Contact from './Contact';
 
+const COMMENT_API = 'http://localhost:8080/user_info'
+
 const Navbar = () => {
+        this.state = {
+            user_info: []
+        }
+
+      const fetchData = () =>{
+          fetch(COMMENT_API)
+          .then(response => response.json())
+          .then(data => this.setState({ user_info: data }));
+        }
 
             return (
             <HashRouter>
