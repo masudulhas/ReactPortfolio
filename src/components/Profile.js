@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Profile extends Component {
-    render() {
+const Profile = () => {
 
         return (
             <div className="container">
@@ -24,19 +23,6 @@ class Profile extends Component {
             </div>
         );
     }
-}
 
 export default Profile;
-let styles = {
-    left: {
-      display: 'flex',
-      border: '1px #ccc solid',
-      justifycontent:'space-between'
-         },
-    right: {
-        // width: '60%',
-        // paddingtop: '20px'
-    }
 
-
-}

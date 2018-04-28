@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Experiences extends Component {
-    render() {
+const Experiences = () => {
+    
         return (
             <div className="container">
               <h2 className="tagline">Experiences</h2>
@@ -114,6 +114,5 @@ class Experiences extends Component {
             </div>
         );
     }
-}
 
 export default Experiences;

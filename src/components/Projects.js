@@ -1,8 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Project extends Component {
-    render() {
-        return (
+const Project = () => {
+       return (
             <div className="container">
       <h2 className="tagline">Projects</h2>
       <p className="lead">&ldquo;You can do anything you set your mind to.&rdquo;<br />- Benjamin Franklin</p>
@@ -36,6 +35,4 @@ class Project extends Component {
             </div>
         );
     }
-}
-
 export default Project;

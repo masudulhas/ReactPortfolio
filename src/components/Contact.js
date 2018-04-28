@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import Navbar from './Navbar';
-import io from "socket.io-client";
 
 const COMMENT_API = 'http://localhost:8080/user_info'
 
 class Contact extends Component {
   constructor(props){
       super(props);
-
+     
       this.handleSubmit = this.handleSubmit.bind(this);
   }
     handleSubmit(e) {
@@ -21,14 +19,15 @@ class Contact extends Component {
             method: 'POST',
             body: 
                 JSON.stringify({
-                "user_name": this.userName.value,
-                    "user_comment": this.userComment.value
+                "user_name": self.userName.value,
+                    "user_comment": self.userComment.value
                 })
             
-        });
-            
+        })
+
     }
     render() {
+        const { user_info } = this.props; 
         return (
             <div className="container">
               <h2 className="tagline">Contact</h2>
@@ -37,8 +36,8 @@ class Contact extends Component {
 
                 <aside className="left">
                   <h4>Follow me</h4>
-                  <a href="https://se.linkedin.com/in/masudulhasan" target="_blank"><i className="fa fa-linkedin-square" aria-hidden="true"></i>Linkedin</a><br/>
-                  <a href="https://twitter.com/masud33bd" target="_blank"><i className="fa fa-twitter" aria-hidden="true"></i>Twitter</a>
+                    <a href="https://se.linkedin.com/in/masudulhasan" target="_blank" rel="noopener noreferrer"><i className="fa fa-linkedin-square" aria-hidden="true"></i>Linkedin</a><br/>
+                    <a href="https://twitter.com/masud33bd" target="_blank" rel="noopener noreferrer"><i className="fa fa-twitter" aria-hidden="true"></i>Twitter</a>
                 </aside>
                 <aside className="right">
                   <h4>E-mail: masudulhas@gmail.com</h4>
@@ -52,7 +51,9 @@ class Contact extends Component {
                     <input ref={(ref) => { this.userComment = ref }} placeholder="Comment" type="text" name="user_comment" /><br />
                     <button type="Submit">Submit</button>
                 </form>
-               
+                 {user_info.map((value) => {
+                    return (<p key={value.user_id}>{value.user_name}:{value.user_comment}</p>);
+                })} 
           </div>
         );
     }

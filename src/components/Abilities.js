@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Abilities extends Component {
-    render() {
+const Abilities = () => {
         return (
             <div className="container">
               <h2 className="tagline">Abilities</h2>
@@ -47,6 +46,4 @@ class Abilities extends Component {
             </div>
         );
     }
-}
-
 export default Abilities;
