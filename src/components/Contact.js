@@ -46,13 +46,15 @@ class Contact extends Component {
                 <aside className="foot">
                 <h5>  &copy; 2018, All rights reserve</h5>
                 </aside>
-                <form onSubmit={this.handleSubmit}>
-                    <input ref={(ref) => { this.userName = ref }} placeholder="User Name" type="text" name="user_name" /><br />
-                    <input ref={(ref) => { this.userComment = ref }} placeholder="Comment" type="text" name="user_comment" /><br />
-                    <button type="Submit">Submit</button>
+                <form  onSubmit={this.handleSubmit}>
+                    <input className="form-control" ref={(ref) => { this.userName = ref }} placeholder="User Name" type="text" name="user_name" /><br />
+                    <input className="form-control" ref={(ref) => { this.userComment = ref }} placeholder="Comment" type="text" name="user_comment" /><br />
+                    <button className="form-control btn" type="Submit">Submit</button>
+                    <p> </p>
                 </form>
                  {user_info.map((value) => {
-                    return (<p key={value.user_id}>{value.user_name}:{value.user_comment}</p>);
+                    return (<div className="comment-form-control" key={value.user_id}>
+                  <span className="right"> userName: {value.user_name}</span><span className="left"> comment: {value.user_comment}</span></div>);
                 })} 
           </div>
         );

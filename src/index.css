@@ -141,6 +141,21 @@ display: block;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out
     }
+    .comment-form-control {
+      display: flex;
+      justify-content: center;
+      margin-left: 200px;
+      width: 50%;
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      line-height: 1.5;
+     
+      background-color: #495057;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: .25rem;
+      transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out
+    }
     button.btn{
       background: cadetblue;
       margin-left:12px;
